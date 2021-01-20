@@ -21,7 +21,7 @@ export default class LoginScreen extends Component {
      
       <Image style={styles.image} source={require("../../assets/chair1.jpg")} />
       <View>
-      <TextInput style={styles.input}
+      {/* <TextInput style={styles.input}
         placeholderTextColor="#aaaaaa"
          placeholder="email"
          value={this.state.email}
@@ -39,7 +39,35 @@ export default class LoginScreen extends Component {
      onChangeText={(password) =>{ 
        this.setState({password})
        
-     }} />
+     }} /> */}
+       <View style={styles.registration}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput
+            style={styles.input}
+            placeholderTextColor="lightgrey"
+            placeholder="email"
+            value={this.state.email}
+            onChangeText={(email) => {
+              this.setState({ email });
+            }}
+          />
+        </View>
+
+        <View style={styles.registration}>
+          <Text style={styles.label}>Password</Text>
+          <TextInput
+            style={styles.input}
+            placeholderTextColor="lightgrey"
+            secureTextEntry={true}
+            placeholder="password"
+            value={this.state.password}
+            onChangeText={(password) => {
+              this.setState({ password });
+            }}
+          />
+        </View>
+
+
       <TouchableOpacity style={styles.button} onPress={()=>this.props.navigation.navigate("RegisterScreen")}>
               <Text style={styles.text2}>
                   SIGN IN
@@ -87,16 +115,7 @@ export default class LoginScreen extends Component {
           marginBottom:50
         },
 
-        input:{
-          flex:0.5,
-          borderBottomWidth:2,
-          borderBottomColor: "lightgrey",
-          fontSize: 20,
-          height:50,
-          marginLeft:10,
-         //  textAlign:'right'
-        
-      },
+      
 
       button:{
         height:50,
@@ -130,5 +149,19 @@ export default class LoginScreen extends Component {
         backgroundColor: "red",
         fontWeight: "bold",
         marginLeft:55
-       }
+       },
+       registration: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        borderBottomWidth: 2,
+        alignItems: "center",
+        borderBottomColor: "lightgrey",
+        marginHorizontal:10,
+        marginVertical:5,
+      },
+    
+      label: {
+        fontSize: 20,
+        // color:"grey"
+      },
     })

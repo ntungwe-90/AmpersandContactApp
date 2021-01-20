@@ -16,7 +16,7 @@ export default function WelcomeScreen({ navigation }) {
       </View>
 
       <View style={styles.register}>
-        <TouchableOpacity onPress={()=>navigation.navigate("LoginScreen")}>
+        <TouchableOpacity onPress={()=>navigation.navigate("RegisterScreen")}>
           <Text>REGISTER</Text>
           <Text style={styles.started}></Text>
         </TouchableOpacity>
