@@ -110,7 +110,7 @@ export default class LoginScreen extends Component {
   
       image: {
           height: 300,
-          width: 359,
+          width:"100%",
           flex: 0.5,
           marginBottom:50
         },

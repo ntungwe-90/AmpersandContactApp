@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
 
   image: {
     height: 200,
-    width: 359,
+    width: "100%",
     flex: 0.5,
   },
 

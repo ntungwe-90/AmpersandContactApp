@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 400,
-    width: 359,
+    width: "100%",
     flex: 0.5,
   },
   textInfo: {
