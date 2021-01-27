@@ -191,7 +191,7 @@ export default class RegisterScreen extends Component {
             
 
         <View>
-          <TouchableOpacity style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.buttonContainer} onPress={()=>this.props.navigation.navigate("QRScanScreen")}>
             <Text style={styles.buttonText}>REGISTER</Text>
           </TouchableOpacity>
         </View>
